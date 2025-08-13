@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Sayanggkuu </title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #ffcdd2;
+    }
+    .container, .notepad, .gallery, .player, .cake, .yeay {
+  border: 2px solid #000;
+  padding: 16px;
+  margin-top: 20px;
+  border-radius: 12px; /* tambahkan ini */
+}
+    button {
+      margin: 5px;
+      padding: 10px;
+      font-weight: bold;
+      position: relative;
+      z-index: 10;
+    }
+    .hidden { display: none; }
+    .photo {
+      width: 100%;
+      border: 2px solid #000;
+      margin-bottom: 10px;
+    }
+    video {
+      width: 100%;
+      border: 2px solid #000;
+    }
+    .caption {
+      text-align: center;
+      font-style: italic;
+    }
+    .rainbow-text {
+      font-weight: bold;
+      background-image: linear-gradient(-45deg, red, orange, yellow, green, blue, indigo, violet, red);
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rainbow 5s linear infinite;
+    }
+    @keyframes rainbow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+    .cake-image {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+      display: block;
+    }
+    .cake-container {
+      text-align: center;
+    }
+    .flame-container {
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      margin-bottom: -40px;
+      margin-top: 10px;
+      pointer-events: none;
+    }
+    .flame {
+      width: 20px;
+      height: 40px;
+      background: radial-gradient(ellipse at center, rgba(255, 200, 0, 0.9), rgba(255, 0, 0, 0));
+      border-radius: 50% 50% 50% 50%;
+      animation: flicker 0.3s infinite alternate;
+      opacity: 0.9;
+    }
+    .gallery {
+    background-image: url('https://k.top4top.io/p_3509lmrs60.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255,255,255,0.7);
+    backdrop-filter: blur(2px);
+}
+.gallery h2 {
+  color: #fff;
+  text-shadow: 0 2px 10px #000; /* agar tetap terbaca di background foto */
+}
+.gallery .caption {
+  color: #fff;
+  text-shadow: 0 2px 8px #000;
+}
+    @keyframes flicker {
+      0% { transform: scale(1) translateY(0px); opacity: 0.8; }
+      100% { transform: scale(1.2) translateY(-2px); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="main">
+    <button onclick="show('player')">MUSIC</button>
+    <button onclick="show('gallery')">GALLERY</button>
+    <button onclick="show('notepad')">NOTEPAD</button>
+    <button onclick="show('cake')">CAKE🎂</button>
+    <div style="background:pink; text-align:center; padding:10px; border-radius: 12px;margin-top:20px; border:2px solid #000">
+      <h2 style="font-family: 'Courier New', monospace">happy birthday sayanggg🎉♥️</h2>
+    </div>
+    <h3 class="rainbow-text" style="text-align:center">SELAMAT ULANG TAHUN KE-15🎉♥️</h3>
+    <div style="border: 2px solid #000; padding:10px;border-radius: 10px;background-color: #e6ccf5; color: #000;">
+      <strong>Message:</strong>
+      <p>Haiii, selamat ulang tahun yyaaa sayanggg hari ini akuu pengenn kamuu ngerasainn semuaa vibes positif dan keajaiban yang cumaa bisaa didapetin kalo kamuu ada di duniaa ini. semogaa segalaa keinginanmu tercapai, apalagi yang kocak-kocak dan gaa biasaa, karena kamuu tuh unik bangettt akuu selaluu bersyukur bisaa ngeliatt kamuuu jadi versi terbaik dari dirimuu, yang kadang-kadang lucuu banget pas lagi baper, tapi juga selalu bikin akuu tersenyum tanpa henti.</p>
+    </div>
+    <p style="font-style: italic; transform: translateX(200px); display: inline-block;">dari: aku</p>
+  </div>
+
+  <div class="cake hidden" id="cake">
+    <div class="cake-container">
+      <h2>AYO TIUP DULU!</h2>
+      <div class="flame-container" id="flameContainer">
+        <div class="flame"></div>
+      </div>
+      <img src="https://j.top4top.io/p_3502econh0.jpg" class="cake-image" alt="Kue">
+      <p><em>jangan lupa berdoa duluuuu...</em></p>
+      <button onclick="tiupLilin()">🕯 Tiup Lilin</button>
+    </div>
+  </div>
+
+  <div class="yeay hidden" id="yeay">
+    <div class="cake-container">
+      <h2>YEAY!</h2>
+      <img src="https://j.top4top.io/p_3502econh0.jpg" class="cake-image" alt="Kue">
+      <p><em>Happy Birthday!! ✨<br> NEXT BUKA GALLERY NYAA</em></p>
+      <button onclick="show('gallery')">✖ Close</button>
+    </div>
+  </div>
+<div class="notepad hidden" id="notepad" style="border: 2px solid #000; background-color: #e6ccf5; color: #000; padding: 20px; border-radius: 10px;">
+  <h2 style="margin-top: 0;">NOTEPAD</h2>
+  <p style="font-size: 24px;">
+    semogaa tahunn ini kamuu makinn banyak momen bahagiaa, dan makin dicintai, karena kamuu emangg pantes dapetin semua ituu. Jangan lupaa, kitaa bakal terus jalann barengg, ngejar mimpi, dan ngelewatinn segalaa drama hidup dengan tawaa. Happy birthday, love!
+    </p>
+    <img src="https://e.top4top.io/p_3424a3ywn0.png" width="100" style="border-radius: 2px; margin-bottom: 12px;" alt="Birthday Image">
+     
+  </p>
+  <button onclick="reset()" style="padding: 10px 16px; margin-right: 10px;">KEMBALI</button>
+  <button onclick="show('gallery')" style="padding: 10px 12px;">GALLERY</button>
+</div>
+  
+
+  <div class="gallery hidden" id="gallery">
+    <h2>GALLERY VIEWER♡</h2>
+    <div id="photoBox"></div>
+    <p id="counter">1/4</p>
+    <button onclick="prevPhoto()">&lt; Sebelumnya</button>
+    <button onclick="nextPhoto()">Berikutnya &gt;</button>
+    <button id="videoButton" onclick="playVideo()">Lihat Video</button>
+    <button onclick="reset()">Kembali</button>
+  </div>
+
+  <div class="player hidden" id="player">
+    <h2>Lagu Favorit<button onclick="show('main')" style="float:right">X</button></h2>
+    <div style="display: flex; gap: 20px; align-items: flex-start;">
+      <div style="flex: 2;">
+        <p>play ini yyaa.<br>[You'll be in my heart ]</p>
+        <button onclick="toggleMusic()">▶</button>
+        <p>00:00 — 04:16</p>
+        <progress id="progress" value="0" max="100"></progress>
+        <div>
+          <label>🔊</label>
+          <input type="range" min="0" max="1" step="0.01" id="volumeSlider">
+        </div>
+        <button onclick="show('gallery')">GALLERY</button>
+        <button onclick="show('notepad')">NOTEPAD</button>
+      </div>
+      <div style="flex: 1; text-align: center; margin-top: 20px;">
+        <img src="https://d.top4top.io/p_350608w3b0.png" width="100" style="border-radius: 2px; margin-bottom: 12px;" alt="Music Image">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const captions = ["semogaa", "sehatt", "selaluuu", ""];
+    const photos = [
+      "https://f.top4top.io/p_3502sj77z0.jpg",
+      "https://l.top4top.io/p_350206zld0.jpg",
+      "https://e.top4top.io/p_3502517u20.jpg"
+    ];
+    let index = 0;
+
+    function show(id) {
+      document.querySelectorAll('.container, .notepad, .gallery, .player, .cake, .yeay').forEach(el => el.classList.add('hidden'));
+      document.getElementById(id).classList.remove('hidden');
+
+      if (id === 'gallery') {
+        updateGallery();
+      }
+
+      if (id === 'cake') {
+        const audio = document.getElementById("audio");
+        audio.play().catch(err => {
+          console.log("Autoplay gagal: ", err);
+        });
+      }
+    }
+
+    function reset() {
+      index = 0;
+      updateGallery();
+      show('main');
+    }
+
+    function updateGallery() {
+      const photoBox = document.getElementById("photoBox");
+      const counter = document.getElementById("counter");
+      const videoButton = document.getElementById("videoButton");
+
+      if (index < 3) {
+        photoBox.innerHTML = `
+          <img id="photo" class="photo" src="${photos[index]}" alt="Foto">
+          <p class="caption" id="caption">${captions[index]}</p>
+        `;
+        counter.textContent = `${index + 1}/4`;
+        videoButton.style.display = "inline-block";
+      } else {
+        photoBox.innerHTML = `<video id="myVideo" loop controls playsinline style="width: 300px; border-radius: 10px;">
+  <source src="https://g.top4top.io/m_35022d3210.mp4" type="video/mp4">
+  Browser kamu tidak mendukung video.
+</video>
+          
+        `;
+        counter.textContent = "4/4";
+        videoButton.style.display = "none";
+      }
+    }
+
+    function nextPhoto() {
+      if (index < 3) index++;
+      updateGallery();
+    }
+
+    function prevPhoto() {
+      if (index > 0) index--;
+      updateGallery();
+    }
+
+    function playVideo() {
+      index = 3;
+      updateGallery();
+    }
+
+    function toggleMusic() {
+      const audio = document.getElementById("audio");
+      const progress = document.getElementById("progress");
+      const slider = document.getElementById("volumeSlider");
+
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+
+      audio.ontimeupdate = () => {
+        progress.value = (audio.currentTime / audio.duration) * 100;
+      };
+
+      slider.oninput = () => {
+        audio.volume = slider.value;
+      };
+    }
+
+    function tiupLilin() {
+      document.getElementById("flameContainer").style.display = "none";
+      setTimeout(() => show('yeay'), 1000);
+    }
+  </script>
+
+  <audio id="audio" src="https://b.top4top.io/m_3502cfvh40.mp3"></audio>
+</body>
+</html>
